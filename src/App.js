@@ -88,44 +88,52 @@ function App() {
       Alcohmeter
     </div>
 	<div className="body">
-		<form>
-			<h6>Update Information:</h6>
-			<label>
-				Age: 
-				<input type="text" name="age" onChange={changeAge.bind(this)}/>
-			</label>
-			<br/>
-			<label>
-				Weight:
-				<input type="text" name="weight" onChange={changeWeight.bind(this)}/>
-			</label>
-			<br/>
-			<label>
-				Gender:
+		<div className="main-container">
+			<div class="alert alert-danger" role="alert">
+				Calculation of Standard Drinks are not accurate and are collected from research. This is created for a hackathon as a Proof Of Concept. We hope to be able to get more accurate measurements in the future.
+			</div>
+			<form>
+				<h6>Update Information:</h6>
+				<label>
+					Age: 
+					<input type="text" name="age" onChange={changeAge.bind(this)}/>
+				</label>
 				<br/>
-				<input type="radio" value="Male" name="gender" onClick={changeGender.bind(this)}/> Male
+				<label>
+					Weight:
+					<input type="text" name="weight" onChange={changeWeight.bind(this)}/>
+				</label>
 				<br/>
-        		<input type="radio" value="Female" name="gender" onClick={changeGender.bind(this)} /> Female
+				<label>
+					Gender:
+					<br/>
+					<input type="radio" value="Male" name="gender" onClick={changeGender.bind(this)}/> Male
+					<br/>
+					<input type="radio" value="Female" name="gender" onClick={changeGender.bind(this)} /> Female
+					<br/>
+					<input type="radio" value="Other" name="gender" onClick={changeGender.bind(this)} /> Other
+				</label>
+				<p>Will you be driving?</p>
+				<input type="radio" value="Yes" name="driving" onClick={changeDriving.bind(this)}/> Yes
 				<br/>
-				<input type="radio" value="Other" name="gender" onClick={changeGender.bind(this)} /> Other
-			</label>
-			<p>Will you be driving?</p>
-			<input type="radio" value="Yes" name="driving" onClick={changeDriving.bind(this)}/> Yes
-			<br/>
-			<input type="radio" value="No" name="driving" onClick={changeDriving.bind(this)}/> No
-		</form>
-		<h1>Current Information:</h1>
-		<h3>All information on drinking limits is measured from these statistics</h3>
-		<p>Hello {localStorage.getItem('age')}</p>
-		<p>Hello {localStorage.getItem('gender')}</p>
-		<p>Permitted Standard Drinks: {standardDrinks}</p>
-      	<ProgressBar>
-			<ProgressBar striped variant="danger" now={danger} key={1} />
-			<ProgressBar variant="warning" now={change} key={2} />
-			<ProgressBar striped variant="success" now={success} key={3} />
-		</ProgressBar>
-		<img src='https://media.discordapp.net/attachments/787116842300211231/787283704678055976/0c5ff60d5d8498db4dd281254bc03449.jpg?width=587&height=663'></img>
-    </div>
+				<input type="radio" value="No" name="driving" onClick={changeDriving.bind(this)}/> No
+				<br/><br/>
+				<input type="submit" value="Submit"/>
+			</form>
+
+			<h1>Current Information:</h1>
+			<h3>All information on drinking limits is measured from these statistics</h3>
+			<p>Age: {localStorage.getItem('age')}</p>
+			<p>Gender: {localStorage.getItem('gender')}</p>
+			<p>Permitted Standard Drinks: {standardDrinks}</p>
+			<ProgressBar>
+				<ProgressBar striped variant="danger" now={danger} key={1} />
+				<ProgressBar variant="warning" now={change} key={2} />
+				<ProgressBar striped variant="success" now={success} key={3} />
+			</ProgressBar>
+			<img src='https://media.discordapp.net/attachments/787116842300211231/787283704678055976/0c5ff60d5d8498db4dd281254bc03449.jpg?width=587&height=663'></img>
+		</div>
+	</div>
 	</>
   );
 }
