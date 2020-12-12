@@ -12,7 +12,7 @@
 
 ## Deployed Web App
 
-To try for yourself, visit here: [n-tandiono.github.io/imagine-cup-australia-2020](n-tandiono.github.io/imagine-cup-australia-2020)
+To try for yourself, visit here: [n-tandiono.github.io/imagine-cup-australia-2020](https://n-tandiono.github.io/imagine-cup-australia-2020/)
 
 ## Demo
 
