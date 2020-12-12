@@ -12,7 +12,7 @@
 
 ## Deployed Web App
 
-To try for yourself, visit here: n-tandiono.github.io/imagine-cup-australia-2020
+To try for yourself, visit here: [n-tandiono.github.io/imagine-cup-australia-2020](n-tandiono.github.io/imagine-cup-australia-2020)
 
 ## Demo
 
@@ -21,7 +21,7 @@ https://www.youtube.com/watch?v=37VuzsBsAVk&feature=youtu.be
 
 ## The Idea
 
-Alcohol is ingrained within society, a complimentary drink within sport games and beverage for people getting together. Despite this, there is also a dark side. In 2015, statistics show that 30% of all road deaths where by the cause of alcohol. Additionally, there is research to suggest that large amounts of alcohol can have long-lasting impacts on the brain. Alcohmeter aims to help empower individuals to think about drinking responsibily while consuming alcohol. Encouraging users to be wheary of how much they drink offer support whenever necessary. This app is built for any individuals who aim to keep alert and aware of when the best time to stop drink is.
+Alcohol is ingrained within society, a complimentary drink within sport games and beverage for people getting together. Despite this, there is also a dark side. In 2015, statistics show that 30% of all road deaths where by the cause of alcohol. Additionally, there is research to suggest that large amounts of alcohol can have long-lasting impacts on the brain. Alcohmeter aims to help empower individuals to think about drinking responsibily while consuming alcohol. Encouraging users to be wary of how much they drink, and to offer support whenever necessary. This app is built for any individuals who aim to keep alert and aware of when the best time to stop drinking is.
 
 ## Technology Stack
 
@@ -44,7 +44,9 @@ Open localhost:3000 on web browser
 
 ## The Journey Here
 
-We initially tried to use andriod studio. Using this technology to take photos through computer vision then analyse through computer vision and AI to differentiate differnt products and the standard drinks. Despite this, we did not have much knowledge in Java nor had we ever use Android Studio given that most of us had done the non-technical stream. Despite this, spent 4 hours trying to learn how to use it and after having little movement, we had decided to move onto React as another potential technology to develop our application.
+We initially tried to use Andriod Studio to create an App. We had planned to use this technology to take photos through the phone's built-in camera, then analyse the barcode the user would scan through computer vision and AI to differentiate between different products and the standard drinks.
+
+Despite this, we did not have much knowledge in Java nor have we ever used Android Studio, given that most of us had done the non-technical stream. However, we spent 4 hours(quite a large chunnk of the Hackathon) trying to learn how to use it and after having little movement in that area, we decided to move onto React instead as another potential technology to develop our application in.
 
 ## Future Implementations
 
