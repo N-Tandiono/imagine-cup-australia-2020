@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Alcohmeter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+- [Deployed Web App](##Deployed-Web-App)
+- [Demo](##demo)
+- [The Idea](##the-idea)
+- [Technology Stack](##technology-stack)
+- [Use on Local Machine](##use-on-local-machine)
 
-In the project directory, you can run:
+## Deployed Web App
 
-### `npm start`
+To try for yourself, visit here: n-tandiono.github.io/imagine-cup-australia-2020
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Demo
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Please enjoy this video:
+https://www.youtube.com/watch?v=37VuzsBsAVk&feature=youtu.be
 
-### `npm test`
+## The Idea
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Alcohol is ingrained within society, a complimentary drink within sport games and beverage for people getting together. Despite this, there is also a dark side. In 2015, statistics show that 30% of all road deaths where by the cause of alcohol. Additionally, there is research to suggest that large amounts of alcohol can have long-lasting impacts on the brain. Alcohmeter aims to help empower individuals to think about drinking responsibily while consuming alcohol. Encouraging users to be wheary of how much they drink offer support whenever necessary. This app is built for any individuals who aim to keep alert and aware of when the best time to stop drink is.
 
-### `npm run build`
+## Technology Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React Application
+- Javascript, HTML, CSS
+- gh-pages
+- localStorage: data persistence
+- Bootstrap
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Use on Local Machine
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Please have React installed, documentation is found here: https://reactjs.org/
 
-### `npm run eject`
+```
+$ git clone git@github.com:N-Tandiono/imagine-cup-australia-2020.git
+$ cd imagine-cup-australia-2020
+$ npm start
+Open localhost:3000 on web brower
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Future Implementations
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Taking into account weight
+- More accurate estimations from a specialist
+- Decrease of alcohol counter overtime, rather than a user reset
+- More hand-drawn emojis!
+- Helplines, emergency contacts linked for faster communication
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for the great hackathon. We had a great time!

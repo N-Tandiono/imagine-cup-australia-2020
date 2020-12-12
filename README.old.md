@@ -1,1 +1,0 @@
-# imagine-cup-australia-2020
