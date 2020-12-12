@@ -7,6 +7,7 @@
 - [The Idea](##the-idea)
 - [Technology Stack](##technology-stack)
 - [Use on Local Machine](##use-on-local-machine)
+- [The Journey Here](##the-journey-here)
 - [Future Implementations](##future-implementations)
 
 ## Deployed Web App
@@ -40,6 +41,10 @@ $ cd imagine-cup-australia-2020
 $ npm start
 Open localhost:3000 on web browser
 ```
+
+## The Journey Here
+
+We initially tried to use andriod studio. Using this technology to take photos through computer vision then analyse through computer vision and AI to differentiate differnt products and the standard drinks. Despite this, we did not have much knowledge in Java nor had we ever use Android Studio given that most of us had done the non-technical stream. Despite this, spent 4 hours trying to learn how to use it and after having little movement, we had decided to move onto React as another potential technology to develop our application.
 
 ## Future Implementations
 
