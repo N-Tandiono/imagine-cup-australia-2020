@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import './assets/css/style.css'
-import Bar from './components/ToxinationBar/bar'
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -21,21 +20,20 @@ function App() {
 			console.log('Setting default')
 			localStorage.setItem('age', 0);
 			localStorage.setItem('drinks', 0);
-			localStorage.setItem('driving', 'no');
+			localStorage.setItem('driving', 'No');
 			localStorage.setItem('gender', 'Male');
 			localStorage.setItem('weight', 60);
 			localStorage.setItem('current-danger', 0);
 			localStorage.setItem('current-warning', 0);
 			localStorage.setItem('current-success', 0);
-			// Bug when it hits over 100
 		}
 	}
 	
-	function checkWarning(sum) {
+	function checkWarning(current_danger, current_warning) {
 		console.log("Checking End")
-		// if (sum > 100) {
-		// 	alert("Please Consider Not Drinking Anymore.")
-		// }
+		if (current_danger + current_warning > 100) {
+			alert("Please Consider Not Drinking Anymore or Sharing Larger Bottles.")
+		}
 	}
 
 	useEffect(() => {
@@ -43,14 +41,15 @@ function App() {
 		let current_warning = localStorage.getItem('current-warning');
 		let current_success = localStorage.getItem('current-success');
 		let drinks = localStorage.getItem('drinks');
-		console.log(current_warning)
-		checkData('current-danger')
-		setChange(current_warning)	
-		setDanger(current_danger)
+		console.log(current_warning);
+		checkData('current-danger');
+		setChange(current_warning);	
+		setDanger(current_danger);
 		localStorage.setItem('current-success', current_success - change);
-		let sum = current_warning + current_danger
+		let sum = current_warning + current_danger;
 		// setSuccess(drinks - current_warning - current_danger)
-		checkWarning(sum)
+		checkWarning(current_danger, current_warning);
+		getFace(current_danger, current_warning);
 	}, [])
 
 	function changeAge(event) {
@@ -176,6 +175,14 @@ function App() {
 			window.location = "";
 		});
 	};
+
+	let refresh4 = document.getElementById('refresh4');
+	if (refresh4) {
+		refresh4.addEventListener('click', () => {
+			window.location = "";
+		});
+	};
+
 	let cancelChange = document.getElementById('cancelChange');
 	if (cancelChange) {
 		cancelChange.addEventListener('click', () => {
@@ -196,6 +203,21 @@ function App() {
 			localStorage.setItem('current-warning', 0);
 		});
 	};
+
+	function getFace(current_danger, current_warning) {
+		if (current_danger + current_warning > 75) {
+			document.getElementById("happy-face").src = crazy;
+		} 
+		else if (current_danger + current_warning > 50) {
+			document.getElementById("happy-face").src = getting_crazy;
+		} 
+		else if (current_danger + current_warning > 25) {
+			document.getElementById("happy-face").src = blush;
+		} 
+		else if (current_danger + current_warning >= 0 || current_danger + current_warning < 0) {
+			document.getElementById("happy-face").src = happyface;
+		} 
+	}
 
   	return (
     <>
@@ -240,6 +262,7 @@ function App() {
 			<input type="radio" value={1.3 * 25} name="What are you having?" id='refresh1' onClick={changeChange.bind(this)}/> Corona Beer 1.3 SD<br/>
 			<input type="radio" value={1.4 * 25} name="What are you having?" id='refresh2' onClick={changeChange.bind(this)}/> Victoria Bitter 1.4 SD<br/>
 			<input type="radio" value={1.2 * 25} name="What are you having?" id='refresh3' onClick={changeChange.bind(this)}/> Somersby Apple Cider 1.2 SD<br/>
+			<input type="radio" value={22 * 25} name="What are you having?" id='refresh4' onClick={changeChange.bind(this)}/> Jack Daniels 22 SD<br/>
 			<br/>
 			<input className='left-button' type="submit" value="Cancel" id='cancelChange'/>
 			<input className='right-button' type="submit" value="Submit" id='addDanger'/>
@@ -251,13 +274,12 @@ function App() {
 			<p>Permitted Standard Drinks: {localStorage.getItem('drinks')}</p>
 			<div className="display">
 				<div className="left">
-					<img src={happyface} id="happy-face" alt="face" className="face-icon"/>
+					<img id="happy-face" alt="face" className="face-icon"/>
 				</div>
 				<div className="right">
 					<ProgressBar>
 						<ProgressBar striped variant="danger" now={localStorage.getItem('current-danger')} key={1} />
 						<ProgressBar variant="warning" now={change} key={2} />
-						<ProgressBar striped variant="success" now={localStorage.getItem('current-success')} key={3} />
 					</ProgressBar>
 				</div>
 			</div>
