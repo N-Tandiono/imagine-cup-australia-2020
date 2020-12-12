@@ -23,3 +23,26 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+input[type="text"] {
+  width: 100%;
+}
+
+.display {
+  padding: 30px;
+}
+
+.left {
+  float: left;
+  width: 10%;
+}
+.right {
+  float: right;
+  margin-top: 20px;
+  width: 80%;
+}
+
+.face-icon {
+  height: 80px;
+  width: 80px;
+}

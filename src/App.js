@@ -5,6 +5,11 @@ import Bar from './components/ToxinationBar/bar'
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import 'bootstrap/dist/css/bootstrap.css';
 
+import happyface from './assets/images/happy-face.png';
+import blush from './assets/images/blush-face.png';
+import getting_crazy from './assets/images/getting-crazy-face.png';
+import crazy from './assets/images/oh-no-face.png';
+
 function App() {
 	const [change, setChange] = useState(0)
 	const [danger, setDanger] = useState(0)
@@ -26,9 +31,9 @@ function App() {
 	
 	function checkWarning(sum) {
 		console.log("Checking End")
-		if (sum > 100) {
-			alert("Please Consider Not Drinking Anymore.")
-		}
+		// if (sum > 100) {
+		// 	alert("Please Consider Not Drinking Anymore.")
+		// }
 	}
 
 	useEffect(() => {
@@ -41,7 +46,7 @@ function App() {
 		setSuccess(100 - current_warning - current_danger)
 		checkStandardDrinks()
 		let sum = current_warning + current_danger
-		// checkWarning(sum)
+		checkWarning(sum)
 	}, [])
 
 	function changeAge(event) {
@@ -82,6 +87,10 @@ function App() {
 		}
 	}
 
+	function showPicture() {
+		
+	}
+
   	return (
     <>
     <div className="title">
@@ -89,7 +98,7 @@ function App() {
     </div>
 	<div className="body">
 		<div className="main-container">
-			<div class="alert alert-danger" role="alert">
+			<div className="alert alert-danger" role="alert">
 				Calculation of Standard Drinks are not accurate and are collected from research. This is created for a hackathon as a Proof Of Concept. We hope to be able to get more accurate measurements in the future.
 			</div>
 			<form>
@@ -126,11 +135,18 @@ function App() {
 			<p>Age: {localStorage.getItem('age')}</p>
 			<p>Gender: {localStorage.getItem('gender')}</p>
 			<p>Permitted Standard Drinks: {standardDrinks}</p>
-			<ProgressBar>
-				<ProgressBar striped variant="danger" now={danger} key={1} />
-				<ProgressBar variant="warning" now={change} key={2} />
-				<ProgressBar striped variant="success" now={success} key={3} />
-			</ProgressBar>
+			<div className="display">
+				<div className="left">
+					<img src={happyface} id="happy-face" alt="face" className="face-icon"/>
+				</div>
+				<div className="right">
+					<ProgressBar>
+						<ProgressBar striped variant="danger" now={danger} key={1} />
+						<ProgressBar variant="warning" now={change} key={2} />
+						<ProgressBar striped variant="success" now={success} key={3} />
+					</ProgressBar>
+				</div>
+			</div>
 			<img src='https://media.discordapp.net/attachments/787116842300211231/787283704678055976/0c5ff60d5d8498db4dd281254bc03449.jpg?width=587&height=663'></img>
 		</div>
 	</div>
