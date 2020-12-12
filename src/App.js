@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import happyface from './assets/images/happy-face.png';
 import blush from './assets/images/blush-face.png';
-import getting_crazy from './assets/images/getting-crazy-face.png';
+import gettingcrazy from './assets/images/getting-crazy-face.png';
 import crazy from './assets/images/oh-no-face.png';
 
 function App() {
@@ -192,6 +192,10 @@ function App() {
 
 	let addDanger = document.getElementById('addDanger');
 	if (addDanger) {
+		let current_danger = localStorage.getItem('current-danger');
+		if (current_danger >= 100) {
+			alert("Please consider how much you will drink.")
+		}
 		addDanger.addEventListener('click', () => {
 			window.location = "";
 		});
@@ -205,11 +209,11 @@ function App() {
 	};
 
 	function getFace(current_danger, current_warning) {
-		if (current_danger + current_warning > 75) {
+		if (current_danger + current_warning - 10 > 75) {
 			document.getElementById("happy-face").src = crazy;
 		} 
 		else if (current_danger + current_warning > 50) {
-			document.getElementById("happy-face").src = getting_crazy;
+			document.getElementById("happy-face").src = gettingcrazy;
 		} 
 		else if (current_danger + current_warning > 25) {
 			document.getElementById("happy-face").src = blush;

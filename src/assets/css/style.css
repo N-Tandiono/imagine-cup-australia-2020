@@ -29,7 +29,7 @@ input[type="text"] {
 }
 
 .display {
-  padding: 30px;
+  padding: 10px;
   height: 120px;
 }
 
@@ -40,7 +40,7 @@ input[type="text"] {
 .right {
   float: right;
   margin-top: 20px;
-  width: 80%;
+  width: 60%;
 }
 
 .face-icon {
