@@ -37,7 +37,7 @@ Please have React installed, documentation is found here: https://reactjs.org/
 $ git clone git@github.com:N-Tandiono/imagine-cup-australia-2020.git
 $ cd imagine-cup-australia-2020
 $ npm start
-Open localhost:3000 on web brower
+Open localhost:3000 on web browser
 ```
 
 ## Future Implementations
