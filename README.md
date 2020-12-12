@@ -7,6 +7,7 @@
 - [The Idea](##the-idea)
 - [Technology Stack](##technology-stack)
 - [Use on Local Machine](##use-on-local-machine)
+- [Future Implementations](##future-implementations)
 
 ## Deployed Web App
 
