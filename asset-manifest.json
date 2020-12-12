@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/imagine-cup-australia-2020/static/css/main.c8fd77ad.chunk.css",
-    "main.js": "/imagine-cup-australia-2020/static/js/main.42c0d2ec.chunk.js",
-    "main.js.map": "/imagine-cup-australia-2020/static/js/main.42c0d2ec.chunk.js.map",
+    "main.js": "/imagine-cup-australia-2020/static/js/main.11abc8c2.chunk.js",
+    "main.js.map": "/imagine-cup-australia-2020/static/js/main.11abc8c2.chunk.js.map",
     "runtime-main.js": "/imagine-cup-australia-2020/static/js/runtime-main.47820689.js",
     "runtime-main.js.map": "/imagine-cup-australia-2020/static/js/runtime-main.47820689.js.map",
     "static/css/2.95f25948.chunk.css": "/imagine-cup-australia-2020/static/css/2.95f25948.chunk.css",
@@ -23,6 +23,6 @@
     "static/css/2.95f25948.chunk.css",
     "static/js/2.c983cdcb.chunk.js",
     "static/css/main.c8fd77ad.chunk.css",
-    "static/js/main.42c0d2ec.chunk.js"
+    "static/js/main.11abc8c2.chunk.js"
   ]
 }
