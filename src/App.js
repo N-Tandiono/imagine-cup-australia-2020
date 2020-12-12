@@ -21,10 +21,10 @@ function App() {
 			console.log('Setting default')
 			localStorage.setItem('age', 0);
 			localStorage.setItem('driving', 'no');
-			localStorage.setItem('gender', 100);
+			localStorage.setItem('gender', 'Male');
 			localStorage.setItem('weight', 60);
-			localStorage.setItem('current-danger', 80);
-			localStorage.setItem('current-warning', 10);
+			localStorage.setItem('current-danger', 0);
+			localStorage.setItem('current-warning', 0);
 			// Bug when it hits over 100
 		}
 	}
@@ -41,9 +41,9 @@ function App() {
 		let current_warning = localStorage.getItem('current-warning');
 		console.log(current_warning)
 		checkData('current-danger')
-		setChange(current_warning)
-		setDanger(current_danger)
-		setSuccess(100 - current_warning - current_danger)
+		setChange(current_warning * 25)
+		setDanger(current_danger * 25)
+		setSuccess(100)
 		checkStandardDrinks()
 		let sum = current_warning + current_danger
 		checkWarning(sum)
@@ -61,6 +61,13 @@ function App() {
 	function changeDriving(event) {
 		localStorage.setItem('driving', event.target.value);
 	}
+	function changeChange(event) {
+		localStorage.setItem('current-warning', event.target.value);
+	}
+	function confirmDanger() {
+		let current_warning = localStorage.getItem('current-warning');
+		localStorage.setItem('current-danger', current_warning);
+	}
 
 	function checkStandardDrinks() {
 		let age = localStorage.getItem('age');
@@ -72,10 +79,10 @@ function App() {
 			setStandardDrinks(0)
 		}
 		else {
-			if (gender == 'Male' && driving == 'Yes') {
+			if ((gender == 'Male' || 'Other')&& driving == 'Yes') {
 				setStandardDrinks(2)
 			}
-			else if (gender == 'Male' && driving == 'No') {
+			else if ((gender == 'Male' || 'Other') && driving == 'No') {
 				setStandardDrinks(4)
 			}
 			if (gender == 'Female' && driving == 'Yes') {
@@ -86,10 +93,55 @@ function App() {
 			}
 		}
 	}
+	let click = document.getElementById('addDanger');
+	if (click) {
+		click.addEventListener('click', () => {
+			let current_warning = localStorage.getItem('current-warning');
+			let current_danger = localStorage.getItem('current-danger');
+			let new_sum = JSON.parse(current_warning) + JSON.parse(current_danger);
+			localStorage.setItem('current-danger', new_sum);
+			localStorage.setItem('current-warning', 0);
+		});
+	};
 
-	function showPicture() {
-		
-	}
+	let refresh1 = document.getElementById('refresh1');
+	if (refresh1) {
+		refresh1.addEventListener('click', () => {
+			window.location = "";
+		});
+	};
+	let refresh2 = document.getElementById('refresh2');
+	if (refresh2) {
+		refresh2.addEventListener('click', () => {
+			window.location = "";
+		});
+	};
+	let refresh3 = document.getElementById('refresh3');
+	if (refresh3) {
+		refresh3.addEventListener('click', () => {
+			window.location = "";
+		});
+	};
+	let cancelChange = document.getElementById('cancelChange');
+	if (cancelChange) {
+		cancelChange.addEventListener('click', () => {
+			window.location = "";
+		});
+	};
+
+	let addDanger = document.getElementById('addDanger');
+	if (addDanger) {
+		addDanger.addEventListener('click', () => {
+			window.location = "";
+		});
+	};
+
+	let click2 = document.getElementById('cancelChange');
+	if (click2) {
+		click2.addEventListener('click', () => {
+			localStorage.setItem('current-warning', 0);
+		});
+	};
 
   	return (
     <>
@@ -129,9 +181,17 @@ function App() {
 				<br/><br/>
 				<input type="submit" value="Submit"/>
 			</form>
-
-			<h1>Current Information:</h1>
-			<h3>All information on drinking limits is measured from these statistics</h3>
+			<br/>
+			<h6>Log what you are drinking</h6>
+			<input type="radio" value="1.3" name="What are you having?" id='refresh1' onClick={changeChange.bind(this)}/> Corona Beer 1.3 SD<br/>
+			<input type="radio" value="1.4" name="What are you having?" id='refresh2' onClick={changeChange.bind(this)}/> Victoria Bitter 1.4 SD<br/>
+			<input type="radio" value="1.2" name="What are you having?" id='refresh3' onClick={changeChange.bind(this)}/> Somersby Apple Cider 1.2 SD<br/>
+			<br/>
+			<input className='left-button' type="submit" value="Cancel" id='cancelChange'/>
+			<input className='right-button' type="submit" value="Submit" id='addDanger'/>
+			<br/><br/><br/>
+			<h3>Current Information:</h3>
+			<h5>All information on drinking limits is measured from these statistics</h5>
 			<p>Age: {localStorage.getItem('age')}</p>
 			<p>Gender: {localStorage.getItem('gender')}</p>
 			<p>Permitted Standard Drinks: {standardDrinks}</p>
@@ -147,8 +207,10 @@ function App() {
 					</ProgressBar>
 				</div>
 			</div>
-			<img src='https://media.discordapp.net/attachments/787116842300211231/787283704678055976/0c5ff60d5d8498db4dd281254bc03449.jpg?width=587&height=663'></img>
 		</div>
+		<footer>
+			By: Nicholas Tandiono, Archibold Liang, Ben Pabian
+		</footer>
 	</div>
 	</>
   );

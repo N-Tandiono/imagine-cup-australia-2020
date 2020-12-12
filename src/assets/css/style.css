@@ -30,6 +30,7 @@ input[type="text"] {
 
 .display {
   padding: 30px;
+  height: 120px;
 }
 
 .left {
@@ -45,4 +46,28 @@ input[type="text"] {
 .face-icon {
   height: 80px;
   width: 80px;
+}
+
+.left-button {
+  float: left;
+  width: 100px;
+  margin: 5px;
+}
+
+.right-button {
+  float: left;
+  width: 100px;
+  margin: 5px;
+}
+
+footer {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px;
+  padding-bottom: 100px;
+  background-color: rgb(126, 2, 126);
+  padding: 20px;
+  font-weight: 200;
+  color: white;
 }
