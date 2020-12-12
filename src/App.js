@@ -31,9 +31,9 @@ function App() {
 	
 	function checkWarning(current_danger, current_warning) {
 		console.log("Checking End")
-		if (current_danger + current_warning > 100) {
-			alert("Please Consider Not Drinking Anymore or Sharing Larger Bottles.")
-		}
+		// if (current_danger + current_warning > 100) {
+		// 	alert("Please Consider Not Drinking Anymore or Sharing Larger Bottles.")
+		// }
 	}
 
 	useEffect(() => {
