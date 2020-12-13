@@ -61,5 +61,6 @@ Despite this, we did not have much knowledge in Java nor have we ever used Andro
 - Decrease of alcohol counter overtime, rather than a user reset
 - More hand-drawn emojis!
 - Helplines, emergency contacts linked for faster communication
+- Location identification to provide the local alcohol restrictions for the user
 
 Thank you for the great hackathon. We had a great time!
