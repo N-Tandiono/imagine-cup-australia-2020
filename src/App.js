@@ -194,7 +194,7 @@ function App() {
 	if (addDanger) {
 		let current_danger = localStorage.getItem('current-danger');
 		if (current_danger >= 100) {
-			alert("Please consider how much you will drink.")
+			alert("Please Consider How Much You Will Drink.")
 		}
 		addDanger.addEventListener('click', () => {
 			window.location = "";
@@ -269,7 +269,7 @@ function App() {
 			<input type="radio" value={22 * 25} name="What are you having?" id='refresh4' onClick={changeChange.bind(this)}/> Jack Daniels 22 SD<br/>
 			<br/>
 			<input className='left-button' type="submit" value="Cancel" id='cancelChange'/>
-			<input className='right-button' type="submit" value="Submit" id='addDanger'/>
+			<input className='right-button' type="submit" value="Drink" id='addDanger'/>
 			<br/><br/><br/>
 			<h3>Current Information:</h3>
 			<h5>All information on drinking limits is measured from these statistics</h5>
@@ -285,6 +285,7 @@ function App() {
 						<ProgressBar striped variant="danger" now={localStorage.getItem('current-danger')} key={1} />
 						<ProgressBar variant="warning" now={change} key={2} />
 					</ProgressBar>
+					<p>Blood Alcohol Content</p>
 				</div>
 			</div>
 		</div>
