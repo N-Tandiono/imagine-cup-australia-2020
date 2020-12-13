@@ -50,7 +50,7 @@ Open localhost:3000 on web browser
 
 ## The Journey Here
 
-We initially tried to use Andriod Studio to create an App. We had planned to use this technology to take photos through the phone's built-in camera, then analyse the barcode the user would scan through computer vision and AI to differentiate between different products and the standard drinks.
+We initially tried to use Andriod Studio to create an App. We had planned to use this technology to take photos through the phone's built-in camera, then analyse the barcode the user would scan through computer vision and AI to differentiate between different products and the standard drinks. https://youtu.be/g_CgUca_fV8
 
 Despite this, we did not have much knowledge in Java nor have we ever used Android Studio, given that most of us had done the non-technical stream. However, we spent 4 hours(quite a large chunnk of the Hackathon) trying to learn how to use it and after having little movement in that area, we decided to move onto React instead as another potential technology to develop our application in.
 
