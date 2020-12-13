@@ -1,5 +1,11 @@
 # Alcohmeter
 
+MSA Team 5 😎:
+
+- Nicholas Tandiono
+- Archibold Liang
+- Benjamin Pabain
+
 ## Table of Contents
 
 - [Deployed Web App](##Deployed-Web-App)
@@ -12,7 +18,7 @@
 
 ## Deployed Web App
 
-To try for yourself, visit here: [n-tandiono.github.io/imagine-cup-australia-2020](https://n-tandiono.github.io/imagine-cup-australia-2020/)
+To try for yourself, visit here: https://n-tandiono.github.io/imagine-cup-australia-2020
 
 ## Demo
 
